@@ -1,0 +1,36 @@
+<div class="">
+    <h5>Available Media Sources</h5>
+
+    <div class="select">
+        <label for="videoSource">Video source: </label><select id="videoSource" #videoSource></select>
+    </div>
+    <div class="select">
+        <label for="audioSource">Audio source: </label><select id="audioSource" #audioSource></select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-sec">
+                    <button (click)="startCam()" class="btn btn-primary">Start Cam</button>
+                    <button (click)="pauseCam()" class="btn btn-warning">Pause</button>
+                    <button (click)="resumeCam()" class="btn btn-info">Resume</button>
+                    <button (click)="soundWithCam()" class="btn btn-danger">Play with Sound</button>
+                </div>
+                <h3>
+                    <video #videoElement></video>
+                </h3>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-sec-audio">
+                    <button (click)="startAudio()" class="btn btn-primary">Start Audio</button>
+                </div>
+                <h3>
+                    <audio controls autoplay #audioElement></audio>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
